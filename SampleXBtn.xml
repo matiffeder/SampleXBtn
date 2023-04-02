@@ -1,0 +1,15 @@
+<Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../../worldxml/ui.xsd"> 
+	<Script file="SampleXBtn.lua"/>
+	<!--your frame to load function and for XBar to create button-->
+	<!--name must be XBarXXX, XXX is your add.btn.name-->
+	<!--suggest: frameStrata="BACKGROUND", frameLevel="1" or higher-->
+	<Frame name="XBarSample" parent="UIParent" frameStrata="BACKGROUND" frameLevel="1">
+		<!--size must be x="128" y="32"-->
+		<Size><AbsDimension x="128" y="32"/></Size>
+		<Anchors><Anchor point="CENTER"/></Anchors>
+		<Scripts>
+			<OnLoad>this:RegisterEvent("VARIABLES_LOADED");</OnLoad>
+			<OnEvent>XBarSample_OnEvent(event);</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>
